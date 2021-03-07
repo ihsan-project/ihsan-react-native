@@ -15,3 +15,17 @@ React Native Bootstrap
      - `brew install node@14`
      - `brew link node@14`
      - Follow brew instruction, like having to `--force` and `--overwrite`
+- Cocoapods 1.10.1
+    - `sudo gem install cocoapods`
+- xcode-select version 2373
+    - `xcode-select --install`
+- watchman 4.9.0
+    - `brew install watchman`
+
+## Local Development for iOS
+
+1. Make sure environment dependencies like Node, Cocoapods, xcode-select, and watchman are installed
+1. In terminal navigate to the iOS directory and run `pod install`
+    - Folow instructions in case repos need to be updated if it can't find a package
+1. Run `npm install`
+1. Run `npm run ios`
