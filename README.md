@@ -15,3 +15,10 @@ React Native Bootstrap
      - `brew install node@14`
      - `brew link node@14`
      - Follow brew instruction, like having to `--force` and `--overwrite`
+- Cocoapods 1.10.1
+    - `sudo gem install cocoapods`
+
+## Local Development for iOS
+
+1. In terminal navigate to the iOS directory and run `pod install`
+    - Folow instructions in case repos need to be updated if it can't find a package
