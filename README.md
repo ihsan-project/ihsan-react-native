@@ -30,3 +30,12 @@ React Native Bootstrap
    - Folow instructions in case repos need to be updated if it can't find a package
 1. Run `yarn install`
 1. Run `yarn ios`
+
+## Git Commit Flow
+
+You can...
+
+- Commit the "normal" way: `git add . && git commit -m "added a new feature"`
+- Or you can commit with more meaningful commit messages: `git add . && git cz`
+  - this will take you through an interactive process of writing commit messages.
+  - Only the type of change and the short description are mandatory fields.
