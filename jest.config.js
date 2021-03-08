@@ -1,4 +1,8 @@
 module.exports = {
   preset: 'react-native',
-  moduleFileExtensions: ['ts', 'tsx', 'json', 'node'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  testMatch: [
+    '**/__tests__/**/*.+(ts|tsx|js)',
+    '**/?(*.)+(spec|test).+(ts|tsx|js)',
+  ],
 };
