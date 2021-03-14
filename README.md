@@ -16,13 +16,19 @@ React Native Bootstrap
     - `brew install node@14`
     - `brew link node@14`
     - Follow brew instruction, like having to `--force` and `--overwrite`
+- watchman 4.9.0
+  - `brew install watchman`
 - Cocoapods 1.10.1
   - `sudo gem install cocoapods`
 - xcode-select version 2373
   - `xcode-select --install`
-- watchman 4.9.0
-  - `brew install watchman`
+- JDK 8
+  - `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
+- Setup local env variables.
+  - Follow step [3. Configure the ANDROID_HOME environment variable](https://reactnative.dev/docs/environment-setup)
 
+### References
+- https://reactnative.dev/docs/environment-setup
 ## Local Development for iOS
 
 1. Make sure environment dependencies like Node, Cocoapods, xcode-select, and watchman are installed
