@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import {add} from './actions/countActions'
 import {useDispatch, useSelector} from 'react-redux';
+import { Analytics } from 'aws-amplify';
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ const App: React.FC = () => {
           title="Press Me"
           onPress= {() => {
             dispatch(add(1));
+            Analytics.record({ name: 'test-click_01' });
           }}
         />
 
