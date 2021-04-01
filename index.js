@@ -7,9 +7,9 @@ import { Provider } from 'react-redux';
 import configureStore from './src/store/configureStore';
 
 const ReduxApp = () => (
-    <Provider store={configureStore()}>
-        <App/>
-    </Provider>
-)
+  <Provider store={configureStore()}>
+    <App />
+  </Provider>
+);
 
 AppRegistry.registerComponent(appName, () => ReduxApp);
