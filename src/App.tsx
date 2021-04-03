@@ -2,8 +2,8 @@ import React from 'react';
 import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeContainer from './containers/home';
-import LoginContainer from './containers/login';
+import HomeContainer from './containers/Home';
+import LoginContainer from './containers/Login';
 
 const Stack = createStackNavigator();
 
