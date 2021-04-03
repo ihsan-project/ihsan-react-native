@@ -7,10 +7,24 @@ import {
   Button,
   View,
 } from 'react-native';
-import { add } from '../actions/countActions';
 import { useDispatch, useSelector } from 'react-redux';
+import { add } from '../actions/countActions';
 
-const HomeContainer: React.FC = () => {
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  detailContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  booksContainer: {
+    flex: 1,
+  },
+});
+
+const Home: React.FC = () => {
   const dispatch = useDispatch();
   const count = useSelector((state) => (state as any).count.count);
   console.log('count = ', count);
@@ -39,18 +53,4 @@ const HomeContainer: React.FC = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  detailContainer: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-  },
-  booksContainer: {
-    flex: 1,
-  },
-});
-
-export default HomeContainer;
+export default Home;

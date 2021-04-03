@@ -7,22 +7,20 @@ import LoginContainer from './containers/Login';
 
 const Stack = createStackNavigator();
 
-const App: React.FC = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Login"
-            component={LoginContainer}
-            options={{ title: 'Ihsan React Native' }}
-          />
-          <Stack.Screen name="Home" component={HomeContainer} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </>
-  );
-};
+const App: React.FC = () => (
+  <>
+    <StatusBar barStyle="dark-content" />
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Login"
+          component={LoginContainer}
+          options={{ title: 'Ihsan React Native' }}
+        />
+        <Stack.Screen name="Home" component={HomeContainer} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  </>
+);
 
 export default App;

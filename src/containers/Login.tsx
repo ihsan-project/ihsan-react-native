@@ -2,7 +2,19 @@ import React from 'react';
 import { SafeAreaView, StyleSheet, Button, View } from 'react-native';
 import { useSelector } from 'react-redux';
 
-const LoginContainer: React.FC = ({ navigation }) => {
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  authContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+});
+
+// TODO: fix prop validation
+const Login: React.FC = ({ navigation }: any) => {
   const count = useSelector((state) => (state as any).count.count);
   console.log('count = ', count);
 
@@ -22,15 +34,4 @@ const LoginContainer: React.FC = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  authContainer: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-  },
-});
-
-export default LoginContainer;
+export default Login;

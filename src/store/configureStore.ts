@@ -8,8 +8,6 @@ const rootReducer = combineReducers({
 });
 
 // TODO: Add Sagas (as middleware) as parameter to composeWithDevTools()
-const configureStore = () => {
-  return createStore(rootReducer, composeWithDevTools());
-};
+const configureStore = () => createStore(rootReducer, composeWithDevTools());
 
 export default configureStore;
