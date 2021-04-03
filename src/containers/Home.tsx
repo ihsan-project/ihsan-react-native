@@ -7,7 +7,7 @@ import {
   Button,
   View,
 } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { logOut } from '../actions/authActions';
 
 const styles = StyleSheet.create({
