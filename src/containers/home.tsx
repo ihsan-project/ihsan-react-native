@@ -5,33 +5,25 @@ import {
   ScrollView,
   Text,
   Button,
-  View
+  View,
 } from 'react-native';
 import { add } from '../actions/countActions';
 import { useDispatch, useSelector } from 'react-redux';
-import 'react-native-gesture-handler';
 
 const HomeContainer: React.FC = () => {
   const dispatch = useDispatch();
   const count = useSelector((state) => (state as any).count.count);
   console.log('count = ', count);
 
-  const loginButtonStyles = {
-    justifyContent: 'center'
-  }
-
   return (
     <>
       <SafeAreaView style={styles.container}>
         <View style={styles.detailContainer}>
-          <Text>
-            Test!
-          </Text>
+          <Text>Test!</Text>
         </View>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={styles.booksContainer}
-        >
+          style={styles.booksContainer}>
           <Text>Hello world</Text>
           <Text>{count}</Text>
           <Button

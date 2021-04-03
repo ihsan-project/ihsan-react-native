@@ -1,22 +1,10 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  Button,
-  View
-} from 'react-native';
-import { add } from '../actions/countActions';
-import { useDispatch, useSelector } from 'react-redux';
-import 'react-native-gesture-handler';
+import { SafeAreaView, StyleSheet, Button, View } from 'react-native';
+import { useSelector } from 'react-redux';
 
 const LoginContainer: React.FC = ({ navigation }) => {
-  const dispatch = useDispatch();
   const count = useSelector((state) => (state as any).count.count);
   console.log('count = ', count);
-
-  const loginButtonStyles = {
-    justifyContent: 'center'
-  }
 
   return (
     <>
@@ -25,7 +13,7 @@ const LoginContainer: React.FC = ({ navigation }) => {
           <Button
             title="Google Login"
             onPress={() => {
-              navigation.navigate('Home', { name: 'Jane' })
+              navigation.navigate('Home', { name: 'Jane' });
             }}
           />
         </View>

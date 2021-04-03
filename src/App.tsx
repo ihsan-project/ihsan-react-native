@@ -1,13 +1,10 @@
 import React from 'react';
-import {
-  StyleSheet,
-  StatusBar,
-} from 'react-native';
+import { StatusBar } from 'react-native';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeContainer from './containers/home'
-import LoginContainer from './containers/login'
+import HomeContainer from './containers/home';
+import LoginContainer from './containers/login';
 
 const Stack = createStackNavigator();
 
@@ -28,19 +25,5 @@ const App: React.FC = () => {
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  authContainer: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-  },
-  booksContainer: {
-    flex: 1,
-  },
-});
 
 export default App;
