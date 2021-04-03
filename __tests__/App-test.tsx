@@ -7,7 +7,7 @@ import configureStore from 'redux-mock-store';
 import App from '../src/App';
 
 const withProviders = (Component) => {
-  const initialState = { count: 0 };
+  const initialState = { auth: { isLoggedIn: false } };
   const mockStore = configureStore();
   const store = mockStore(initialState);
 

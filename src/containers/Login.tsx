@@ -1,6 +1,7 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, Button, View } from 'react-native';
-import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { logIn } from '../actions/authActions';
 
 const styles = StyleSheet.create({
   container: {
@@ -13,24 +14,15 @@ const styles = StyleSheet.create({
   },
 });
 
-// TODO: fix prop validation
-const Login: React.FC = ({ navigation }: any) => {
-  const count = useSelector((state) => (state as any).count.count);
-  console.log('count = ', count);
+const Login: React.FC = () => {
+  const dispatch = useDispatch();
 
   return (
-    <>
-      <SafeAreaView style={styles.container}>
-        <View style={styles.authContainer}>
-          <Button
-            title="Google Login"
-            onPress={() => {
-              navigation.navigate('Home', { name: 'Jane' });
-            }}
-          />
-        </View>
-      </SafeAreaView>
-    </>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.authContainer}>
+        <Button title="Google Login" onPress={() => dispatch(logIn())} />
+      </View>
+    </SafeAreaView>
   );
 };
 
