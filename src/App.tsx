@@ -7,6 +7,7 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeContainer from './containers/home'
+import LoginContainer from './containers/login'
 
 const Stack = createStackNavigator();
 
@@ -17,11 +18,11 @@ const App: React.FC = () => {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
-            name="Home"
-            component={HomeContainer}
-            options={{ title: 'Welcome' }}
+            name="Login"
+            component={LoginContainer}
+            options={{ title: 'Ihsan React Native' }}
           />
-          {/* <Stack.Screen name="Profile" component={ProfileScreen} /> */}
+          <Stack.Screen name="Home" component={HomeContainer} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
