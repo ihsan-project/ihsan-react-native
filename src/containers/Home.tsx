@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { add } from '../actions/countActions';
+import { logOut } from '../actions/authActions';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,27 +26,17 @@ const styles = StyleSheet.create({
 
 const Home: React.FC = () => {
   const dispatch = useDispatch();
-  const count = useSelector((state) => (state as any).count.count);
-  console.log('count = ', count);
 
   return (
     <>
       <SafeAreaView style={styles.container}>
         <View style={styles.detailContainer}>
-          <Text>Test!</Text>
+          <Text>Home Screen, only visible once logged in.</Text>
         </View>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.booksContainer}>
-          <Text>Hello world</Text>
-          <Text>{count}</Text>
-          <Button
-            title="Press Me"
-            color="#841584"
-            onPress={() => {
-              dispatch(add(1));
-            }}
-          />
+          <Button title="Log Out" onPress={() => dispatch(logOut())} />
         </ScrollView>
       </SafeAreaView>
     </>

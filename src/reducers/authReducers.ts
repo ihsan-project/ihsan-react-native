@@ -1,4 +1,4 @@
-import { LOG_IN } from '../constants/actionConstants';
+import { LOG_IN, LOG_OUT } from '../constants/actionConstants';
 
 const initialState = {
   isLoggedIn: false,
@@ -10,6 +10,11 @@ export default (state = initialState, action: any) => {
       return {
         ...state,
         isLoggedIn: true,
+      };
+    case LOG_OUT:
+      return {
+        ...state,
+        isLoggedIn: false,
       };
     default:
       return state;
