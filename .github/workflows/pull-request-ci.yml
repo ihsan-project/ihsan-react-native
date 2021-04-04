@@ -56,5 +56,5 @@ jobs:
           SLACK_ICON_EMOJI: ':robot_face:'
           SLACK_COLOR: ${{ job.status }}
           SLACK_TITLE: New Pull Request Opened for the ${{ github.event.repository.name }} Repo.
-          # SLACK_MESSAGE: ${{ steps.pr-url.outputs.url }}
+          SLACK_MESSAGE: ${{ steps.pr-url.outputs.url }}
           MSG_MINIMAL: true
