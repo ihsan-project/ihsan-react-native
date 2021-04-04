@@ -43,9 +43,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Get PR URL
+        uses: kceb/pull-request-url-action@v1
+          id: pr-url
+
       - name: Slack Notification
-        uses:
-          - rtCamp/action-slack-notify@v2
+        uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_CHANNEL: pull-requests
