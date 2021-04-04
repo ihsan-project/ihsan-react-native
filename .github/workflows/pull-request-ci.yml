@@ -47,8 +47,7 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_CHANNEL: pull-requests
-          SLACK_USERNAME: GitHubBot
+          SLACK_USERNAME: GitHub Bot
           SLACK_ICON_EMOJI: ':robot_face:'
-          SLACK_COLOR: ${{job.status}}
+          SLACK_COLOR: ${{test-and-lint.status}}
           SLACK_TITLE: New Pull Request
-          MSG_MINIMAL: true
