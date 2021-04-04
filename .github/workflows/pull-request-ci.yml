@@ -58,4 +58,5 @@ jobs:
           SLACK_TITLE: New Pull Request Opened for the ${{ github.event.repository.name }} Repo.
           SLACK_MESSAGE: ${{ steps.pr-url.outputs.url }}
           # MSG_MINIMAL: true
-        run: echo "${{ steps.pr-url.outputs.url }}"
+
+      - run: echo "${{ steps.pr-url.outputs.url }}"
