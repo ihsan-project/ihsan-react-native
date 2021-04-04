@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native';
 import { useDispatch } from 'react-redux';
-import { logOut } from '../actions/authActions';
+import { logOut } from '../actions';
 
 const styles = StyleSheet.create({
   container: {

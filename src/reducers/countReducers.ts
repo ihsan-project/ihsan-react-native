@@ -1,4 +1,4 @@
-import { ADD_NUMBER } from '../constants/actionConstants';
+import { ADD_NUMBER } from '../constants';
 
 const initialState = {
   count: 0,
@@ -9,7 +9,7 @@ export default (state = initialState, action) => {
     case ADD_NUMBER:
       return {
         ...state,
-        count: state.count + action.payLoad,
+        count: state.count + action.payload,
       };
     default:
       return state;
