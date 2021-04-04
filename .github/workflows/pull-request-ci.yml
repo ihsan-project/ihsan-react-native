@@ -45,7 +45,7 @@ jobs:
 
       - name: Get PR URL
         uses: kceb/pull-request-url-action@v1
-          id: pr-url
+        id: pr-url
 
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
