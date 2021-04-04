@@ -55,6 +55,7 @@ jobs:
           SLACK_USERNAME: GitHub Bot
           SLACK_ICON_EMOJI: ':robot_face:'
           SLACK_COLOR: ${{ job.status }}
-          SLACK_TITLE: New Pull Request Opened for the ${{ github.event.repository.name }} Repo. ${{ steps.pr-url.outputs.url }}
+          SLACK_TITLE: New Pull Request Opened for the ${{ github.event.repository.name }} Repo.
           SLACK_MESSAGE: ${{ steps.pr-url.outputs.url }}
           # MSG_MINIMAL: true
+        run: echo "${{ steps.pr-url.outputs.url }}"
