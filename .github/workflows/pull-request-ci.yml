@@ -49,5 +49,5 @@ jobs:
           SLACK_CHANNEL: pull-requests
           SLACK_USERNAME: GitHub Bot
           SLACK_ICON_EMOJI: ':robot_face:'
-          SLACK_COLOR: ${{test-and-lint.status}}
+          SLACK_COLOR: ${{job.test-and-lint.status}}
           SLACK_TITLE: New Pull Request
