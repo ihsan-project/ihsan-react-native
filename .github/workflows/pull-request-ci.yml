@@ -1,8 +1,6 @@
 name: Merge Request CI
 
 on:
-  push:
-    branches: [slack-integration]
   pull_request:
     branches: [main]
 
@@ -50,5 +48,5 @@ jobs:
           SLACK_USERNAME: GitHub Bot
           SLACK_ICON_EMOJI: ':robot_face:'
           SLACK_COLOR: ${{ job.status }}
-          SLACK_TITLE: New Pull Request Opened for the ${{ github.event.repository.name }} repo
+          SLACK_TITLE: New Pull Request Opened for the ${{ github.event.repository.name }} Repo
           MSG_MINIMAL: true
