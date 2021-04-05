@@ -1,4 +1,4 @@
-import { LOG_IN, LOG_OUT } from '../constants/actionConstants';
+import { LOG_IN, LOG_OUT } from '../constants';
 
 const initialState = {
   isLoggedIn: false,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, Button, View } from 'react-native';
 import { useDispatch } from 'react-redux';
-import { logIn } from '../actions/authActions';
+import { logIn } from '../actions';
 
 const styles = StyleSheet.create({
   container: {

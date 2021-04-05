@@ -4,11 +4,10 @@ import { AppRegistry } from 'react-native';
 import { Provider } from 'react-redux';
 import App from './src/App';
 import { name as appName } from './app.json';
-
-import configureStore from './src/store/configureStore';
+import store from './src/store';
 
 const ReduxApp = () => (
-  <Provider store={configureStore()}>
+  <Provider store={store}>
     <App />
   </Provider>
 );

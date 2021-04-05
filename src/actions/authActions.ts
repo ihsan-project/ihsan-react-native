@@ -1,4 +1,4 @@
-import { LOG_IN, LOG_OUT } from '../constants/actionConstants';
+import { LOG_IN, LOG_OUT } from '../constants';
 
 // TODO: Fix the type in Future PR
 export const logIn = (): any => ({
