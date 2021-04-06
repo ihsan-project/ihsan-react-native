@@ -1,4 +1,4 @@
-import { ADD_NUMBER, GET_TODO } from '../constants';
+import { ADD_NUMBER, FETCH_TODO } from '../constants';
 
 // TODO: Fix the type in Future PR
 export const add = (num: number): any => ({
@@ -7,5 +7,5 @@ export const add = (num: number): any => ({
 });
 
 export const fetchTodos = () => ({
-  type: GET_TODO,
+  type: FETCH_TODO,
 });
