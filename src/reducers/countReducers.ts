@@ -1,7 +1,8 @@
-import { ADD_NUMBER, FETCH_TODO } from '../constants';
+import { ADD_NUMBER, LOADED_TODO } from '../constants';
 
 const initialState = {
   count: 0,
+  todo: null,
 };
 
 export default (state = initialState, action) => {
@@ -11,10 +12,10 @@ export default (state = initialState, action) => {
         ...state,
         count: state.count + action.payload,
       };
-    case FETCH_TODO:
+    case LOADED_TODO:
       return {
         ...state,
-        todo: `fake todo. ${Math.random()}`,
+        todo: action.payload,
       };
     default:
       return state;

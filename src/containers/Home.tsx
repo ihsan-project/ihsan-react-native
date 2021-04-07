@@ -33,7 +33,7 @@ const Home: React.FC = () => {
       <SafeAreaView style={styles.container}>
         <View style={styles.detailContainer}>
           <Text>Home Screen, only visible once logged in.</Text>
-          <Text>Todos: {todo}</Text>
+          <Text>Todo: {todo}</Text>
           <Button title="Fetch Todo" onPress={() => dispatch(fetchTodos())} />
         </View>
         <ScrollView
