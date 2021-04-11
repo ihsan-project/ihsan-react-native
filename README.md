@@ -1,4 +1,4 @@
-# ihsanReactNative
+# IhsanReactNative
 
 React Native Bootstrap
 
@@ -28,7 +28,9 @@ React Native Bootstrap
   - Follow step [3. Configure the ANDROID_HOME environment variable](https://reactnative.dev/docs/environment-setup)
 
 ### References
+
 - https://reactnative.dev/docs/environment-setup
+
 ## Local Development for iOS
 
 1. Make sure environment dependencies like Node, Cocoapods, xcode-select, and watchman are installed
