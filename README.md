@@ -39,6 +39,14 @@ React Native Bootstrap
 1. Run `yarn install`
 1. Run `yarn ios`
 
+## Redux Developer Tools
+
+- [Install redux developer tools using `brew`](https://dev.to/piscespieces/how-to-debug-redux-in-a-react-native-app-4b19)
+- `brew install --cask react-native-debugger`
+- `yarn debug`
+- on iOS Simulator: `cmd+d` then choose 'Debug'
+- on Android Emulator: `cmd+m` then choose 'Debug'
+
 ## Git Commit Flow
 
 You can...
