@@ -1,6 +1,6 @@
 import { ADD_NUMBER, LOADED_TODO } from '../constants';
 
-const initialState = {
+export const initialState = {
   count: 0,
   todo: null,
 };

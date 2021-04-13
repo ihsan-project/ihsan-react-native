@@ -1,6 +1,6 @@
 import { LOG_IN, LOG_OUT } from '../constants';
 
-const initialState = {
+export const initialState = {
   isLoggedIn: false,
 };
 
