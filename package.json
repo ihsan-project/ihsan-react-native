@@ -6,6 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=8081'",
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
