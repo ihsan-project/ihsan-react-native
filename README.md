@@ -26,6 +26,9 @@ React Native Bootstrap
   - `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
 - Setup local env variables.
   - Follow step [3. Configure the ANDROID_HOME environment variable](https://reactnative.dev/docs/environment-setup)
+- Setup Android Google SSO Fingerprint
+  - Run `yarn android-fingerprint`. Take the output `SHA1` string and give it to admins to add to Firebase
+  - Admin should also provide the file to put in the following path: `/android/app/google-services.json`
 
 ### References
 
