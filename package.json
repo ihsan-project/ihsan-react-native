@@ -10,7 +10,8 @@
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "android-fingerprint": "keytool -list -v -keystore android/app/debug.keystore -alias androiddebugkey -storepass android -keypass android"
+    "android-fingerprint": "keytool -list -v -keystore android/app/debug.keystore -alias androiddebugkey -storepass android -keypass android",
+    "setup": "cd ios && pod install"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",

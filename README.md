@@ -38,8 +38,7 @@ React Native Bootstrap
 ## Local Development for iOS
 
 1. Make sure environment dependencies like Node, Cocoapods, xcode-select, and watchman are installed
-1. In terminal navigate to the iOS directory and run `pod install`
-   - Folow instructions in case repos need to be updated if it can't find a package
+1. In terminal, run `yarn setup`
 1. Run `yarn install`
 1. Run `yarn ios`
 
