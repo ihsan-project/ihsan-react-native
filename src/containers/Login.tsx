@@ -7,6 +7,7 @@ import {
   GoogleSigninButton,
   statusCodes,
 } from 'react-native-google-signin';
+import env from '../../.env'
 
 const styles = StyleSheet.create({
   container: {
@@ -21,8 +22,6 @@ const styles = StyleSheet.create({
 
 const Login: React.FC = () => {
   const dispatch = useDispatch();
-  // const [loggedIn, setloggedIn] = useState(false);
-  // const [userInfo, setuserInfo] = useState([]);
 
   const googleSignIn = async () => {
     try {
@@ -49,9 +48,8 @@ const Login: React.FC = () => {
 
   useEffect(() => {
     GoogleSignin.configure({
-      scopes: ['email'], // what API you want to access on behalf of the user, default is email and profile
-      // webClientId: '418977770929-g9ou7r9eva1u78a3anassoqreas466p0.apps.googleusercontent.com', // client ID of type WEB for your server (needed to verify user ID and offline access)
-      // offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
+      scopes: ['email'],
+      webClientId: env.googleWebClientId,
     });
   }, []);
 
