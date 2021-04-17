@@ -11,6 +11,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "android-fingerprint": "keytool -list -v -keystore android/app/debug.keystore -alias androiddebugkey -storepass android -keypass android",
+    "presetup": "node ./scripts/setup.js",
     "setup": "cd ios && pod install"
   },
   "dependencies": {
@@ -43,6 +44,7 @@
     "@types/redux-mock-store": "^1.0.2",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
     "@typescript-eslint/parser": "^4.15.0",
+    "aws-sdk": "^2.888.0",
     "babel-jest": "^25.1.0",
     "commitizen": "^4.2.3",
     "cz-conventional-changelog": "3.3.0",

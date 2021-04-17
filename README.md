@@ -26,10 +26,9 @@ React Native Bootstrap
   - `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
 - Setup local env variables.
   - Follow step [3. Configure the ANDROID_HOME environment variable](https://reactnative.dev/docs/environment-setup)
-- Setup Android Google SSO Fingerprint
+- Setup Environment
   - Run `yarn android-fingerprint`. Take the output `SHA1` string and give it to admins to add to Firebase
-  - Admin should also provide the file to put in the following path: `/android/app/google-services.json`
-  - Copy the `.env.js-keep` to `.env.js` and fill in `googleWebClientId` from the google-services.json file
+  - Run `AWS_ACCESS_KEY_ID=<INSERT VALUE> AWS_SECRET_ACCESS_KEY=<INSERT VALUE> WS_CERT_BUCKET=<INSERT VALUE> yarn setup`. Get the key values from admin and replace the `<INSERT VALUE>`s
 
 ### References
 
