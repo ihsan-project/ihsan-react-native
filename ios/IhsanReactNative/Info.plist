@@ -27,7 +27,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.512734492658-37dufg8tskin8fe7j7arcelvpsdb23ut</string>
+				<string>$(GOOGLE_SSO_REVERSE_URL)</string>
 			</array>
 		</dict>
 	</array>

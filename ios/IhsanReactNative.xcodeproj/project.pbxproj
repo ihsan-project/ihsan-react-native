@@ -63,6 +63,7 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = IhsanReactNative/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EEB62D2B2745B029300A8F2 /* Pods-IhsanReactNative-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IhsanReactNative-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-IhsanReactNative-tvOS/Pods-IhsanReactNative-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B64FC260262B974200CBEBD9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "IhsanReactNative/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B64FC266262B9B3000CBEBD9 /* Config-staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-staging.xcconfig"; sourceTree = "<group>"; };
 		CA446033977024A32985D49C /* Pods-IhsanReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IhsanReactNative.debug.xcconfig"; path = "Target Support Files/Pods-IhsanReactNative/Pods-IhsanReactNative.debug.xcconfig"; sourceTree = "<group>"; };
 		DC187594F8B778852FD9B0B1 /* Pods-IhsanReactNative-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IhsanReactNative-tvOS.release.xcconfig"; path = "Target Support Files/Pods-IhsanReactNative-tvOS/Pods-IhsanReactNative-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -162,6 +163,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				B64FC266262B9B3000CBEBD9 /* Config-staging.xcconfig */,
 				13B07FAE1A68108700A75B9A /* IhsanReactNative */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* IhsanReactNativeTests */,
@@ -850,6 +852,7 @@
 		};
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B64FC266262B9B3000CBEBD9 /* Config-staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
