@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { SafeAreaView, StyleSheet, Button, View, Alert } from 'react-native';
+import React, { useEffect } from 'react';
+import { SafeAreaView, StyleSheet, View, Alert } from 'react-native';
 import { useDispatch } from 'react-redux';
-import { logIn } from '../actions';
 import {
   GoogleSignin,
   GoogleSigninButton,
   statusCodes,
 } from 'react-native-google-signin';
-import env from '../../.env'
+import { logIn } from '../actions';
+
+/* eslint-disable import/extensions, import/no-unresolved */
+import env from '../../.env';
+/* eslint-enable import/extensions, import/no-unresolved */
 
 const styles = StyleSheet.create({
   container: {
@@ -26,12 +29,11 @@ const Login: React.FC = () => {
   const googleSignIn = async () => {
     try {
       await GoogleSignin.hasPlayServices();
-      const {accessToken, idToken} = await GoogleSignin.signIn();
+      const { idToken } = await GoogleSignin.signIn();
 
-      // setloggedIn(true);
-      console.log('accessToken', accessToken)
-      console.log('idToken', idToken)
-      dispatch(logIn())
+      console.info('idToken', idToken);
+
+      dispatch(logIn());
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow
@@ -45,7 +47,6 @@ const Login: React.FC = () => {
     }
   };
 
-
   useEffect(() => {
     GoogleSignin.configure({
       scopes: ['email'],
@@ -58,11 +59,11 @@ const Login: React.FC = () => {
       <View style={styles.authContainer}>
         {/* <Button title="Google Login" onPress={() => dispatch(logIn())} /> */}
         <GoogleSigninButton
-                style={{width: 192, height: 48}}
-                size={GoogleSigninButton.Size.Wide}
-                color={GoogleSigninButton.Color.Dark}
-                onPress={googleSignIn}
-              />
+          style={{ width: 192, height: 48 }}
+          size={GoogleSigninButton.Size.Wide}
+          color={GoogleSigninButton.Color.Dark}
+          onPress={googleSignIn}
+        />
       </View>
     </SafeAreaView>
   );

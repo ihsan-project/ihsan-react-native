@@ -10,8 +10,6 @@ const ACCESS_KEY_ID = process.env.AWS_ACCESS_KEY_ID
 const SECRET_ACCESS_KEY = process.env.AWS_SECRET_ACCESS_KEY
 const BUCKET_NAME = process.env.AWS_CERT_BUCKET
 
-console.log("test", BUCKET_NAME);
-
 if (!BUCKET_NAME) {
     console.error('No environment keys!!');
     exit(0);
