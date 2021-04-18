@@ -3,12 +3,11 @@ import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
-  Text,
   Button,
-  View,
 } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchTodos, logOut } from '../actions';
+import { logOut } from '../actions';
+import BookList from '../components/BookList'
 
 const styles = StyleSheet.create({
   container: {
@@ -31,11 +30,7 @@ const Home: React.FC = () => {
   return (
     <>
       <SafeAreaView style={styles.container}>
-        <View style={styles.detailContainer}>
-          <Text>Home Screen, only visible once logged in.</Text>
-          <Text>Todo: {todo}</Text>
-          <Button title="Fetch Todo" onPress={() => dispatch(fetchTodos())} />
-        </View>
+        <BookList />
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.booksContainer}>
