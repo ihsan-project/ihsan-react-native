@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 
 const BookList: React.FC = () => {
   const dispatch = useDispatch();
-  const todo = useSelector((state) => (state as any).count.todo);
+  const todo = useSelector((state) => (state as any).count?.todo);
 
   return (
     <View style={styles.booksContainer}>
