@@ -1,4 +1,4 @@
-package com.ihsanreactnative;
+package com.ihsanproject.client;
 
 import com.facebook.react.ReactActivity;
 

@@ -21,6 +21,8 @@ target 'IhsanReactNative' do
   post_install do |installer|
     flipper_post_install(installer)
   end
+  
+  pod 'GoogleSignIn', '~> 5.0.2'
 end
 
 target 'IhsanReactNative-tvOS' do

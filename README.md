@@ -26,6 +26,9 @@ React Native Bootstrap
   - `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
 - Setup local env variables.
   - Follow step [3. Configure the ANDROID_HOME environment variable](https://reactnative.dev/docs/environment-setup)
+- Setup Environment
+  - Run `yarn android-fingerprint`. Take the output `SHA1` string and give it to admins to add to Firebase
+  - Run `AWS_ACCESS_KEY_ID=<INSERT VALUE> AWS_SECRET_ACCESS_KEY=<INSERT VALUE> WS_CERT_BUCKET=<INSERT VALUE> yarn setup`. Get the key values from admin and replace the `<INSERT VALUE>`s
 
 ### References
 
@@ -34,8 +37,7 @@ React Native Bootstrap
 ## Local Development for iOS
 
 1. Make sure environment dependencies like Node, Cocoapods, xcode-select, and watchman are installed
-1. In terminal navigate to the iOS directory and run `pod install`
-   - Folow instructions in case repos need to be updated if it can't find a package
+1. In terminal, run `yarn setup`
 1. Run `yarn install`
 1. Run `yarn ios`
 

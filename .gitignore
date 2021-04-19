@@ -2,6 +2,9 @@
 #
 .DS_Store
 
+.env.js
+ios/Config-staging.xcconfig
+
 # Xcode
 #
 build/
@@ -28,6 +31,10 @@ build/
 .gradle
 local.properties
 *.iml
+
+# Google SSO
+ios/IhsanReactNative/GoogleService-Info.plist
+android/app/google-services.json
 
 # node.js
 #
