@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  Button,
-  View,
-} from 'react-native';
+import { StyleSheet, Text, Button, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTodos } from '../actions';
 
@@ -22,9 +17,9 @@ const BookList: React.FC = () => {
 
   return (
     <View style={styles.booksContainer}>
-        <Text>Home Screen, only visible once logged in.</Text>
-        <Text>Todo: {todo}</Text>
-        <Button title="Fetch Todo" onPress={() => dispatch(fetchTodos())} />
+      <Text>Home Screen, only visible once logged in.</Text>
+      <Text>Todo: {todo}</Text>
+      <Button title="Fetch Todo" onPress={() => dispatch(fetchTodos())} />
     </View>
   );
 };
