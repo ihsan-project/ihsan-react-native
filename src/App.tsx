@@ -11,11 +11,14 @@ const Stack = createStackNavigator();
 
 const App: React.FC = () => {
   const isLoggedIn = useSelector((state) => (state as any).auth.isLoggedIn);
+  const displayLoading = useSelector((state) => (state as any).app.displayLoading);
 
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <ProgressBar color={Colors.red800} indeterminate={true} />
+      {displayLoading && (
+        <ProgressBar color={Colors.red800} indeterminate={true} />
+      )}
       <NavigationContainer>
         <Stack.Navigator>
           {isLoggedIn ? (

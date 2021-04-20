@@ -6,7 +6,11 @@ import {
   GoogleSigninButton,
   statusCodes,
 } from 'react-native-google-signin';
-import { logIn } from '../actions';
+import {
+  logIn,
+  showLoading,
+  hideLoading
+} from '../actions';
 
 /* eslint-disable import/extensions, import/no-unresolved */
 import env from '../../.env';
@@ -27,12 +31,15 @@ const Login: React.FC = () => {
   const dispatch = useDispatch();
 
   const googleSignIn = async () => {
+    dispatch(showLoading());
+
     try {
       await GoogleSignin.hasPlayServices();
       const { idToken } = await GoogleSignin.signIn();
 
       console.info('idToken', idToken);
 
+      dispatch(hideLoading());
       dispatch(logIn());
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
