@@ -6,11 +6,7 @@ import {
   GoogleSigninButton,
   statusCodes,
 } from 'react-native-google-signin';
-import {
-  logIn,
-  showLoading,
-  hideLoading
-} from '../actions';
+import { logIn, showLoading, hideLoading } from '../actions';
 
 /* eslint-disable import/extensions, import/no-unresolved */
 import env from '../../.env';
