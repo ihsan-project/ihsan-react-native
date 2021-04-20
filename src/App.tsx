@@ -3,6 +3,7 @@ import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useSelector } from 'react-redux';
+import { ProgressBar, Colors } from 'react-native-paper';
 import HomeContainer from './containers/Home';
 import LoginContainer from './containers/Login';
 
@@ -14,6 +15,7 @@ const App: React.FC = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
+      <ProgressBar color={Colors.red800} indeterminate={true} />
       <NavigationContainer>
         <Stack.Navigator>
           {isLoggedIn ? (
