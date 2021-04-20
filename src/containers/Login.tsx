@@ -38,6 +38,7 @@ const Login: React.FC = () => {
       dispatch(hideLoading());
       dispatch(logIn());
     } catch (error) {
+      dispatch(hideLoading());
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow
       } else if (error.code === statusCodes.IN_PROGRESS) {
