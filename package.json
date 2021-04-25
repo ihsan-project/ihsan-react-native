@@ -12,7 +12,8 @@
     "lint:fix": "eslint . --fix",
     "android-fingerprint": "keytool -list -v -keystore android/app/debug.keystore -alias androiddebugkey -storepass android -keypass android",
     "presetup": "node ./scripts/setup.js",
-    "setup": "cd ios && pod install"
+    "setup": "cd ios && pod install",
+    "clean": "watchman watch-del-all && yarn cache clean && cd android && ./gradlew app:uninstallAll"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
