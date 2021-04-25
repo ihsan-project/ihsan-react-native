@@ -6,11 +6,8 @@ import {
   GoogleSigninButton,
   statusCodes,
 } from 'react-native-google-signin';
+import config from 'react-native-config';
 import { logIn, showLoading, hideLoading } from '../actions';
-
-/* eslint-disable import/extensions, import/no-unresolved */
-import env from '../../.env';
-/* eslint-enable import/extensions, import/no-unresolved */
 
 const styles = StyleSheet.create({
   container: {
@@ -54,7 +51,7 @@ const Login: React.FC = () => {
   useEffect(() => {
     GoogleSignin.configure({
       scopes: ['email'],
-      webClientId: env.googleWebClientId,
+      webClientId: config.GOOGLE_WEB_CLIENT_ID,
     });
   }, []);
 
