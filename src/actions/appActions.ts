@@ -1,4 +1,9 @@
-import { LOADING_HIDE, LOADING_SHOW, APP_DID_LOAD, HYDRATE_APP_UNAUTH } from '../constants';
+import {
+  LOADING_HIDE,
+  LOADING_SHOW,
+  APP_DID_LOAD,
+  HYDRATE_APP_UNAUTH,
+} from '../constants';
 
 export const showLoading = () => ({
   type: LOADING_SHOW,

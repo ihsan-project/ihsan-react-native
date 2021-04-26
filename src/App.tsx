@@ -1,9 +1,8 @@
 import React from 'react';
 import { StyleSheet, StatusBar, View } from 'react-native';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { useSelector } from 'react-redux';
 import { ProgressBar, Colors } from 'react-native-paper';
 import HomeContainer from './containers/Home';
 import LoginContainer from './containers/Login';
