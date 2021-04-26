@@ -41,10 +41,10 @@ s3.getObject({
 });
 
 s3.getObject({
-    Key: '.env.js',
+    Key: '.env',
     Bucket: BUCKET_NAME
 }).promise().then((data) => {
-    writeFile('.env.js', data.Body)
+    writeFile('.env', data.Body)
     console.log('Downloaded .env.js successfully')
 }).catch((err) => {
     throw err
