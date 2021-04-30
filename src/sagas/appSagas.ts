@@ -1,5 +1,5 @@
 import { takeEvery, put } from 'redux-saga/effects';
-import axios from 'react-native-axios';
+import axios from 'axios';
 import config from 'react-native-config';
 
 import { APP_DID_LOAD, HYDRATE_APP_UNAUTH } from '../constants';
