@@ -1,33 +1,21 @@
-import { takeEvery, put } from 'redux-saga/effects';
-import axios from 'axios';
-import config from 'react-native-config';
+import { takeEvery, put, call } from 'redux-saga/effects';
 
 import { APP_DID_LOAD, HYDRATE_APP_UNAUTH } from '../constants';
-import { hydrateAppUnauth as hydrateAction } from '../actions';
+import {
+  hydrateAppUnauth as hydrateAction,
+  fetchSettings as fetchSettingsAction,
+} from '../actions';
 
 function* beginUnauthHydration() {
   yield put(hydrateAction());
 }
 
-function downloadSettings() {
+function* downloadSettings() {
   console.log('begin downloading settings...');
 
-  const instance = axios.create({
-    baseURL: config.API_BASE_URL,
-    timeout: 10000,
-    headers: { 'x-api-key': config.API_KEY },
-  });
+  yield put(fetchSettingsAction());
 
-  // TODO: Abstract this into some helper class
-  instance
-    .get('settings')
-    .then((res) => {
-      // TODO: Load this into redux
-      console.log('settings', res.data);
-    })
-    .catch((err) => {
-      console.log('settings error:', err);
-    });
+  console.log('done downloading settings...');
 }
 
 export function* appDidLoad() {
