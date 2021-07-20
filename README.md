@@ -41,6 +41,11 @@ React Native Bootstrap
 1. Run `yarn install`
 1. Run `yarn ios`
 
+### Debugging not running
+
+- Make sure to run `yarn clean`
+- If running iOS, manually delete the dev apps
+
 ## Redux Developer Tools
 
 - [Install redux developer tools using `brew`](https://dev.to/piscespieces/how-to-debug-redux-in-a-react-native-app-4b19)
@@ -48,6 +53,11 @@ React Native Bootstrap
 - `yarn debug`
 - on iOS Simulator: `cmd+d` then choose 'Debug'
 - on Android Emulator: `cmd+m` then choose 'Debug'
+
+### Debugging Redux Dev Tools
+
+- Go to [chrome extensions](chrome://extensions/) settings and `Allow access to file URLs`
+- With the debugger up in Chrome, hit the settings gear and uncheck `Enable JavaScript source maps`
 
 ## Git Commit Flow
 
